@@ -1,0 +1,95 @@
+body {
+	background-color: white;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	}
+
+div#pageHeadHome {
+	color: whitesmoke;
+	padding-left: 30px;
+}
+
+
+div#pageHead {
+	color: whitesmoke;
+	background-image: url("images/background7.jpg");
+	background-size: cover;
+	background-position: center center;
+	padding-left: 30px;
+}
+
+div#pageHead h1 {
+	display: inline-block;
+	font-size: 400%;
+}
+
+div#pageHeadHome h1 {
+	display: inline-block;
+	font-size: 400%;
+}
+
+
+div#mainBody {
+	diplay: flex;
+}
+
+
+div#leftGradient {
+	background: linear-gradient(90deg, rgba(255,255,255,.75) 0%, rgba(255,255,255,.0) 100%);
+	width: 260px;
+	left: -10px;	/* This was because of a weird margin thing on Mac OS that I just couldn't figure out. Yay... */
+	top: -10px;		/* ... see above comment... */
+	padding-bottom: 10px;	/* ... same issue ... */
+	position: fixed;
+	height: 400px;
+	height: 105%;
+	max-height: 100%;
+}
+
+div#leftMenu {
+	position: absolute;
+	float: left;
+	height: 100%;
+	display: inline-block;
+	/*background: linear-gradient(90deg, rgba(255,255,255,.75) 0%, rgba(255,255,255,.0) 100%); */
+
+}
+
+ul.leftMenu {
+	list-style: none;
+	display: inline-block;
+	/* background-color: rgba(255,255,255,.25); */
+	padding: 30px;
+	margin-top: 10px;
+	width: 200px;
+}
+
+ul.leftMenu li {
+	padding-left: 15px;
+}
+
+a.menuItem {
+	font-size: 250%;
+	color: black;
+	text-decoration: none;
+}
+
+a.menuItem:visited {
+	color: black;
+}
+
+ul.leftMenu li:hover {
+	background-color: rgba(0,0,0,.60);
+}
+
+ul.leftMenu li:hover a {
+	color: whitesmoke;
+}
+
+div#content {
+	display: inline-block;
+	border-color: rgb(240,240,240);
+	border-width: 2px;
+	margin-left: 250px;
+}

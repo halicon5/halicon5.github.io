@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Singleton Studios</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body id="bodyId" style="background-image: url('images/background9.jpg")>
+
+<div id="leftGradient">&nbsp<!-- just a div that will sit in the background, holds not content. --></div>
+
+<div id="pageHeadHome">
+	<h1>Singleton Studios</h1>
+	<span class="tagline">Fine art and pet photography.</span>
+</div>
+
+<div id="mainbody">
+	<div id="leftMenu">
+	<ul class="leftMenu">
+		<li><a class="menuItem" href="index.html">Home</a></li>
+		<li><a class="menuItem" href="gallery.html">Gallery</a></li>
+		<li><a class="menuItem" href="services.html">Photo Services</a></li>
+		<!--<li><a class="menuItem" href="aboutUs.html">About Us</a></li>-->
+		<li><a class="menuItem" href="contactUs.html">Contact</a></li>
+		<li><a class="menuItem" href="blog.html">Blog</a></li>
+	</ul>
+	</div>
+
+	<div id="content">
+<!--
+<p style="color: white; background-color: black">This page is going to have a background rotating selection of large images, cycled by a short JavaScript function that will manipulate the DOM of the body tag.</p>
+-->
+	</div>
+</div>
+
+
+<!--
+Normally I don't build websites in raw HTML and sections of pages common across multiple pages such as headers and menus are built into a back-end driven by either PHP or scripts in .NET to generate the HTML on the fly.
+
+Because I like how effective Alan Shapiro's design for his home page is, I'm straight up stealing the idea. The  One criticism I do have of his menu is that sometimes his links can get visually lost in the backgrounds, so I have added a gray transparency layer to the div containing the menu to allow the text
+-->
+
+	<script>
+		let bgImageList = ['images/background1.jpg',
+						'images/background2.jpg',
+						'images/background3.jpg',
+						'images/background4.jpg',
+						'images/background5.jpg',
+						'images/background6.jpg',
+						'images/background7.jpg',
+						'images/background8.jpg',
+						'images/background9.jpg'
+						];
+		
+		let cycleInterval = 5000; // Millisecond delay between bg image switches
+
+		let curCount = 0;
+		let bodyElem = document.getElementById("bodyId");
+		
+		function setBackgroundImage(imageURL) {
+			bodyElem.setAttribute("style", "background-image: url('" + imageURL + "');");	
+		}
+
+		function runImageCycle() {
+			/*
+			Sets the background image by using the bgImageList array
+			increments the global counter
+			if counter exceeds length of array, set counter back to zero.
+			*/
+			setBackgroundImage( bgImageList[curCount] );
+			curCount++;
+			if (curCount >= bgImageList.length) {
+				curCount = 0;
+			}
+			console.log(bgImageList[curCount]);
+			console.log(curCount);
+		}
+
+		setInterval(runImageCycle, cycleInterval);
+
+		/*
+		This next chunk just attempts to pre-cache each of the background images to prevent an inconvenient white flicker that was taking place on the index page if an image hadn't been loaded yet. 
+		It doesn't appear to work.
+		*/
+		backgroundImgCache = [];
+		for (var i = 0; i < bgImageList.length; i++) {
+			backgroundImgCache[i] = new Image();
+			backgroundImgCache[i].src = bgImageList[i];
+			console.log(bgImageList[i]);
+		}
+
+	</script>
+
+
+</body>
+</html>
