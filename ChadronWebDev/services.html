@@ -24,40 +24,74 @@
 	</div> <!-- End of #leftMenu -->
 
 	<div id="content">
-		<h2>Schedule a photo shoot!</h2>
+		<h1>Schedule a photo shoot!</h1>
 
 
 		<p><strong>Do you have an important furry friend in your life that deserves a photo shoot?</strong></p>
 
 
-		<div>
-			<div>Photo of a pet goes here - left aligned</div>
+		<div class="servicesRow">
+			<div class="servicesPhoto leftImg"><img src="images/services1.jpg" alt="Happy woman hugging a Great Dane" title="Happy woman hugging a Great Dane"></div>
 			
-			<div><p><b>Location:</b> We serve clients in the greater Casper metro area. Pet lovers from farther away can schedule us, but please be aware that travel rates will apply.</p></div>
+			<div class="servicesBlurb"><p><b>Location:</b> We serve clients in the greater Casper metro area. Pet lovers from farther away can schedule us, but please be aware that travel rates will apply.</p></div>
 		</div>
 
 
-		<div>
-			<div><p><b>Getting ready for the photo shoot:</b> Make sure you have a leash, some treats, and maybe some of your pet's favorite toys or blankets. A bath or even a wipedown with a damp cloth can help give their fur an memorable lustre and get rid of distracting stray fluff or dingy dust. A lot of pets can have some crusties on the eyes or noses, so don't forget to clean there!</p></div>
-			
-			<div>Placeholder for a right-aligned image of another pet</div>
+		<div class="servicesRow">			
+			<div class="servicesPhoto rightImg"><img src="images/services2.jpg" alt="A well-loved Golden Retriever with her mom and dad." title="A well-loved Golden Retriever with her mom and dad."></div>
+
+			<div class="servicesBlurb"><p><b>Getting ready for the photo shoot:</b> Make sure you have: </p>
+
+				<ul>
+					<li>a leash</li>
+					<li>some treats</li>
+					<li>and maybe some of your pet's favorite toys or blankets!</li>
+				</ul>
+
 		</div>
 
-		<div>
-			<div>Placeholder of a left-aligned image of a very old dog with happy owners</div>
-			<div><p><b>Senior pets: </b>High quality photos and prints that celebrate the lives of our senior fur-babies are by far our most popular service. Please don't wait until it is too late to schedule a session that celebrates your beloved senior pet.</p></div>
+		<div class="servicesRow">			
+			<div class="servicesPhoto leftImg"><img src="images/services5.jpg" alt="A red-coated pit bull on a hike." title="A red-coated pit bull on a hike."></div>
+
+			<div class="servicesBlurb">
+				<p>A bath or even a wipedown with a damp cloth can help give their fur an memorable lustre and get rid of distracting stray fluff or dingy dust. A lot of pets can have some crusties on the eyes or noses, so don't forget to clean there!</p></div>
+
 		</div>
 
 
-		<pre>
-Insert a form here that collects
-	name
-	address
-	phone number
-	email
-		</pre>
+		<div class="servicesRow">
+			<div class="servicesPhoto rightImg"><img src="images/services3.jpg" alt="A dignified senior dog with soft lighting." title="A dignified senior dog with soft lighting."></div>
+
+			<div class="servicesBlurb"><p><b>Senior pets: </b>High quality photos and prints that celebrate the lives of our senior fur-babies are by far our most popular service. Please don't wait!</p></div>
+		</div>
+
+
+		<div class="servicesRow">
+			<h2>Schedule your appointment!</h2>
+			<form action="submitForm.html" method="get">
+				<table class="submissionForm">
+					<colgroup>
+						<col style="font-weight: bold;">
+					</colgroup>
+					<tr><td>Name</td><td><input name="custName" size="40"></td></tr>
+					<tr><td>Pet's Name</td><td><input name="petName" size="40"></td></tr>
+					<tr><td>Pet Breed</td><td><input name="petBreed" size="40"></td></tr>
+					<tr><td>Pet Age</td><td><input name="petBreed" size="40"></td></tr>
+					<tr><td>Street Address 1</td><td><input name="custAddress" size="40"></td></tr>
+					<tr><td>Street Address 2 (opt)</td><td><input name="custAddress" size="40"></td></tr>
+					<tr><td>City, State</td><td><input name="city" size="30">, <input name="state" size="2" maxlength="2"></td></tr>
+					<tr><td>E-mail</td><td><input name="custAddress" size="40"></td></tr>
+					<tr><td>Phone</td><td>(<input name="custPhoneArea" size="3" maxlength="3">) <input name="custPhoneNumber" size="8" maxlength=8></td></tr>
+					<tr><td></td><td>What is your availability.<br>
+						<textarea name="schedule" cols="30" rows="4"></textarea></td></tr>
+					</table>
+				<input type="submit" value="Submit request!" class="submitButton">
+			</form>
+
+		</div>
 
 	</div><!-- End of #content -->
+	<div id="footer">All text, images, and logos are &copy Shane Singleton.</div>
 </div><!-- End of main body -->
 
 

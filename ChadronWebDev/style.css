@@ -3,16 +3,18 @@ body {
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
-	}
+	margin: 0px;
+	background-color: #CAC7C0;
+}
 
 div#pageHeadHome {
-	color: whitesmoke;
+	color:  #CAC7C0; /* whitesmoke; */
 	padding-left: 30px;
 }
 
 
 div#pageHead {
-	color: whitesmoke;
+	color: #CAC7C0; /* whitesmoke; */
 	background-image: url("images/background7.jpg");
 	background-size: cover;
 	background-position: center center;
@@ -34,18 +36,21 @@ div#mainBody {
 	diplay: flex;
 }
 
+div#footer {
+	margin: auto;
+	padding: 30px;
+	font-style: italic;
+	text-align: center;
+}
 
 div#leftGradient {
 	background: linear-gradient(90deg, rgba(255,255,255,.75) 0%, rgba(255,255,255,.0) 100%);
 	width: 260px;
-	left: -10px;	/* This was because of a weird margin thing on Mac OS that I just couldn't figure out. Yay... */
-	top: -10px;		/* ... see above comment... */
-	padding-bottom: 10px;	/* ... same issue ... */
+	padding-bottom: 10px;
 	position: fixed;
-	height: 400px;
-	height: 105%;
-	max-height: 100%;
+	height: 100vh;
 }
+
 
 div#leftMenu {
 	position: absolute;
@@ -70,7 +75,7 @@ ul.leftMenu li {
 }
 
 a.menuItem {
-	font-size: 250%;
+	font-size: 200%;
 	color: black;
 	text-decoration: none;
 }
@@ -91,5 +96,130 @@ div#content {
 	display: inline-block;
 	border-color: rgb(240,240,240);
 	border-width: 2px;
+	margin-top: 10px;
 	margin-left: 250px;
+	max-width: 1200px;
+	padding-right: 30px;
+	padding-top: 30px;
+}
+
+
+div.blogImage {
+	width: 60%;
+	margin: auto;
+}
+
+.blogImage img {
+	max-width: 100%;
+	max-height: 100%;
+	padding: 10px;
+	background-color: #363532;
+	border-radius: 5px;
+}
+
+
+div.servicesRow {
+	max-width: 800px;
+	margin-top: 30px;
+	clear: both;
+}
+
+div.servicesPhoto {
+	width: 360px;
+	padding: 10px;
+	background-color: #363532;
+	border-radius: 5px;
+}
+
+div.leftImg {
+	float: left;
+}
+
+div.rightImg {
+	float: right;
+}
+
+.servicesPhoto img {
+	max-width: 360px;
+	max-height: 100%;
+	margin: auto;
+}
+
+colgroup.headerColumn {
+	font-weight: bold;
+}
+
+div.servicesBlurb {
+	padding: 20px;
+	align-content: center;
+	font-size: 125%;
+}
+
+input,textarea {
+	padding: 5px;
+	border-radius: 5px;
+}
+
+
+
+#galleryGrid {
+}
+
+div.galleryPhoto {
+	max-width: 280px;
+	margin: 30px ;
+	display: inline-block;
+}
+
+.galleryPhoto img {
+	max-width: 280px;
+	padding: 10px ;
+	background-color: #363532;
+	border-radius: 5px;
+
+}
+
+a.closeOverlay {
+	font-size: 200%;
+	background-color: #1E1C15;
+	color: #CAC4C0;
+	font-weight: bold;
+	border: 2px solid #363332;
+	border-radius: 3px;
+	padding: 3px;
+	margin-bottom: 5px;
+	text-decoration: none;
+	display: inline-block;
+}
+
+#galleryOverlay {
+	/* This CSS shamelessly stolen from w3schools.com example */
+	position: fixed; /* Sit on top of the page content */
+	display: none; /* Hidden by default */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	padding: 10%;
+	overflow: scroll;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(255,255,255,0.25); /* Black background with opacity */
+	backdrop-filter: blur(10px);
+	z-index: 2; /* Specify a stack order in case you're using a different order for other */
+	place-items: center;
+}
+
+#galleryContainer {
+	margin: auto;
+	max-height: 80vh;
+}
+
+#imageShowcase {
+	max-height: 100%;
+	max-width: 100%;
+	padding: 10px;
+	background-color: #363532;
+	border-radius: 5px;
+
 }

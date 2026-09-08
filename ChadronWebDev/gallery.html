@@ -24,12 +24,97 @@
 		<li><a class="menuItem" href="blog.html">Blog</a></li>
 	</ul>
 	</div>
+
+	<div id="content">
+		<h1>Gallery</h1>
+
+		<div id="galleryGrid">
+			<div class="galleryPhoto"><img src="images/background1.jpg" alt="Lightning" 
+				onclick="showcaseImage('images/background1.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/gallery01.jpg" alt="Purple wild flowers" 
+				onclick="showcaseImage('images/gallery01.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/background2.jpg" alt="Happy dog"
+				onclick="showcaseImage('images/background2.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/gallery02.jpg" alt="Rustic snowscape" 
+				onclick="showcaseImage('images/gallery02.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/background3.jpg" alt="Delicate, white mountain flowers" 
+				onclick="showcaseImage('images/background3.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/gallery03.jpg" alt="Lightning" 
+				onclick="showcaseImage('images/gallery03.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/background4.jpg" alt="Thistle bud"
+				onclick="showcaseImage('images/background4.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/gallery04.jpg" alt="Aurora borealis"
+				onclick="showcaseImage('images/gallery04.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/background5.jpg" alt="Chokecherry blossoms and water droplets"
+				onclick="showcaseImage('images/background5.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/gallery05.jpg" alt="Alcova lake"
+				onclick="showcaseImage('images/gallery05.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/background6.jpg" alt="White flower with a tiny insect"
+				onclick="showcaseImage('images/background6.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/gallery06.jpg" alt="Waterside canyon"
+				onclick="showcaseImage('images/gallery06.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/background7.jpg" alt="Tree silhouette and stormy clouds"
+				onclick="showcaseImage('images/background7.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/gallery07.jpg" alt="A bee"
+				onclick="showcaseImage('images/gallery07.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/background8.jpg" alt="Man telling his golden retreiver he loves her"
+				onclick="showcaseImage('images/background8.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/gallery08.jpg" alt="Luna, the most photogenic dog that ever dogged." title="Luna, the most photogenic dog that ever dogged."
+				onclick="showcaseImage('images/gallery08.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/background9.jpg" alt="Luna gazing at the sun from within the shadows."
+				onclick="showcaseImage('images/background9.jpg');"></div>
+
+			<div class="galleryPhoto"><img src="images/gallery09.jpg" alt="Bruce, a big goofy dog."
+				onclick="showcaseImage('images/gallery09.jpg');"></div>
+		</div>
+	</div>
+
+
 </div>
 
-<div id="content">
-<p>A fluid grid of images will appear here.</p>
+<div id="galleryOverlay" onclick="hideOverlay();">
+	<div id="galleryContainer">
+		<div style="text-align: right;"><a class="closeOverlay" href="javascript: hideOverlay();" onclick="hideOverlay();">Close Overlay</a></div>
+		<img id="imageShowcase" src="images/background1.jpg">
+	</div>
 </div>
 
+<script>
+	var overlayElem = document.getElementById("galleryOverlay");
+	var imageShowcase = document.getElementById("imageShowcase");
+
+	function showOverlay() {
+		overlayElem.style.display = "grid";
+	}
+
+	function hideOverlay() {
+		overlayElem.style.display = "none";
+	}
+
+	function showcaseImage(imgUrl) {
+		console.log(imgUrl);
+		imageShowcase.setAttribute("src", imgUrl);	
+		showOverlay();
+	}
+</script>
+
+	<div id="footer">All text, images, and logos are &copy Shane Singleton.</div>
 
 </body>
 </html>
