@@ -166,7 +166,10 @@ input,textarea {
 	border-radius: 5px;
 }
 
-
+table.submissionForm tr td:first-child {
+	text-align: right;
+	font-weight: bold;
+}
 
 #galleryGrid {
 }
@@ -229,3 +232,6 @@ a.closeOverlay {
 	border-radius: 5px;
 
 }
+
+
+

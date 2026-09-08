@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<title>Singleton fine art | Scheduling</title>
+	<title>Singleton Studios| Scheduling</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -73,17 +73,17 @@
 					<colgroup>
 						<col style="font-weight: bold;">
 					</colgroup>
-					<tr><td>Name</td><td><input name="custName" size="40"></td></tr>
-					<tr><td>Pet's Name</td><td><input name="petName" size="40"></td></tr>
-					<tr><td>Pet Breed</td><td><input name="petBreed" size="40"></td></tr>
-					<tr><td>Pet Age</td><td><input name="petBreed" size="40"></td></tr>
-					<tr><td>Street Address 1</td><td><input name="custAddress" size="40"></td></tr>
-					<tr><td>Street Address 2 (opt)</td><td><input name="custAddress" size="40"></td></tr>
-					<tr><td>City, State</td><td><input name="city" size="30">, <input name="state" size="2" maxlength="2"></td></tr>
-					<tr><td>E-mail</td><td><input name="custAddress" size="40"></td></tr>
-					<tr><td>Phone</td><td>(<input name="custPhoneArea" size="3" maxlength="3">) <input name="custPhoneNumber" size="8" maxlength=8></td></tr>
+					<tr><td><label for="custName">Name</label></td><td><input id="custName" name="custName" size="40"></td></tr>
+					<tr><td><label for="petName">Pet's Name</label></td><td><input id="petName" name="petName" size="40"></td></tr>
+					<tr><td><label for="petBreed">Pet Breed</td><td><input id="petBreed" name="petBreed" size="40"></td></tr>
+					<tr><td><label for="petAge">Pet Age</td><td><input id="petAge" name="petAge" size="40"></td></tr>
+					<tr><td><label for="custAddress">Street Address 1</td><td><input id="custAddress" name="custAddress" size="40"></td></tr>
+					<tr><td><label for="custAddress2">Street Address 2 (opt)</td><td><input id="custAddress2" name="custAddress2" size="40"></td></tr>
+					<tr><td><label for="city">City</label>, <label for="state">State</label></td><td><input id="city" name="city" size="30">, <input id="state" name="state" size="2" maxlength="2"></td></tr>
+					<tr><td><label for="custEmail">E-mail</label></td><td><input id="custEmail" name="custEmail" size="40"></td></tr>
+					<tr><td><label for="custPhoneArea">Phone</label></td><td>(<input id="custPhoneArea" name="custPhoneArea" size="3" maxlength="3">) <input id="custPhoneNumber" name="custPhoneNumber" size="8" maxlength=8></td></tr>
 					<tr><td></td><td>What days or times work best for you and your pet?<br>
-						<textarea name="schedule" cols="30" rows="4"></textarea></td></tr>
+						<textarea id="schedule" name="schedule" cols="30" rows="4"></textarea></td></tr>
 					<tr><td></td><td><input type="submit" value="Submit" class="submitButton"></td></tr>
 				</table>
 			</form>
