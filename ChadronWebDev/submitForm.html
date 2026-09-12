@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Singleton Studios | Contact Us</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="pageHead">
+	<h1>Singleton Studios</h1>
+	<span class="tagline">Fine art and pet photography.</span>
+</div>
+
+<div id="mainbody">
+	<div id="leftMenu">
+	<ul class="leftMenu">
+		<a class="menuItem" href="index.html"><li>Home</li></a>
+		<a class="menuItem" href="gallery.html"><li>Gallery</li></a>
+		<a class="menuItem" href="services.html"><li>Photo Services</li></a>
+		<a class="menuItem" href="contactUs.html"><li>Contact</li></a>
+		<a class="menuItem" href="blog.html"><li>Blog</li></a>
+	</ul>
+	</div> <!-- End of #leftMenu -->
+
+	<div id="content">
+		<h1>Thank you, <span id="custName"></span>!</h1>
+
+		<p>Shane loves <span style="font-weight: bold" id="petBreed"></span> and is excited to meet you and <span id="petName"></span>. We can't wait to take some beautiful photographs!</p>
+
+		<p>We are located at: </p>
+		<address>
+			Eastridge Mall<br>
+			601 SE Wyoming Blvd<br>
+			Casper, WY 82609
+		</address>
+
+		<p>Our hours are 10:00 AM to 7:00 PM, Monday through Saturday.</p>
+
+		<p>Call us to schedule an appointment at 307-555-5555, or <a href="services.html#schedule">schedule an appointment online.</a></p>
+
+	</div><!-- End of #content -->
+</div><!-- End of main body -->
+
+
+
+
+
+	<div id="footer">All text, images, and logos are &copy Shane Singleton.</div>
+
+	<script>
+		var custName = document.getElementById('custName');
+		var petBreed = document.getElementById('petBreed');
+		var petName = document.getElementById('petName');
+		var getParams = new URLSearchParams(document.location.search);
+		function populateTemplate() {
+			custName.innerHTML = getParams.get('custName');
+			petBreed.innerHTML = getParams.get('petBreed');
+			petName.innerHTML = getParams.get('petName');
+		}
+
+		populateTemplate();
+	</script>
+
+</body>
+</html>
+
