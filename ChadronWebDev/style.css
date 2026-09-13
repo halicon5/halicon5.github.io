@@ -1,3 +1,5 @@
+
+
 body {
 	background-color: white;
 	background-size: cover;
@@ -5,6 +7,14 @@ body {
 	background-attachment: fixed;
 	margin: 0px;
 	background-color: #CAC7C0;
+}
+
+/*
+Header styling
+*/
+
+h1, h2, h3 {
+	font-family: Copperplate;
 }
 
 div#pageHeadHome {
@@ -42,6 +52,11 @@ div#footer {
 	text-align: center;
 }
 
+
+/*
+Lefthand menu and left-hand gradient styling
+*/
+
 div#leftGradient {
 	background: linear-gradient(90deg, rgba(255,255,255,.75) 0%, rgba(255,255,255,.0) 100%);
 	width: 260px;
@@ -56,7 +71,6 @@ div#leftMenu {
 	float: left;
 	height: 100%;
 	display: inline-block;
-	/*background: linear-gradient(90deg, rgba(255,255,255,.75) 0%, rgba(255,255,255,.0) 100%); */
 
 }
 
@@ -67,38 +81,48 @@ ul.leftMenu {
 	padding: 30px;
 	margin-top: 10px;
 	width: 200px;
+	font-family: Copperplate;
 }
 
 ul.leftMenu li {
 	padding-left: 15px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	border-bottom: 1px solid #363532;
 }
 
 a.menuItem {
 	font-size: 150%;
-	color: black;
+	color: #363532;
 	text-decoration: none;
 }
 
+a.menuItem:hover {
+	color: #CAC4C0;
+}
+
 a.menuItem:visited {
-	color: black;
+	color: #363532;
 }
 
 ul.leftMenu li:hover {
 	background-color: rgba(0,0,0,.60);
+	color: #CAC4C0;
 }
 
-ul.leftMenu li:hover a {
-	color: whitesmoke;
-}
+
+
+
+/*
+Main content for various pages
+*/
 
 div#content {
 	display: inline-block;
 	border-color: rgb(240,240,240);
 	border-width: 2px;
 	margin-top: 10px;
-	margin-left: 250px;
+	margin-left: 260px;
 	max-width: 1200px;
 	padding-right: 30px;
 	padding-top: 30px;
@@ -171,12 +195,18 @@ table.submissionForm tr td:first-child {
 	font-weight: bold;
 }
 
+
+
+/*
+Gallery styles
+*/
+
 #galleryGrid {
 }
 
 div.galleryPhoto {
 	max-width: 280px;
-	margin: 30px ;
+	margin: 15px ;
 	display: inline-block;
 }
 
@@ -202,26 +232,24 @@ a.closeOverlay {
 }
 
 #galleryOverlay {
-	/* This CSS shamelessly stolen from w3schools.com example */
-	position: fixed; /* Sit on top of the page content */
-	display: none; /* Hidden by default */
-	width: 100%; /* Full width (cover the whole page) */
-	height: 100%; /* Full height (cover the whole page) */
-	padding: 10%;
-	overflow: scroll;
+	z-index: 100; /* force to the front of the render stack */
+	position: fixed; 
+	display: none; /* Hidden by default, toggled to grid via javascript */
+	width: 100vw; 
+	height: 100%; 
+	/*overflow: scroll;*/
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: rgba(255,255,255,0.25); /* Black background with opacity */
-	backdrop-filter: blur(10px);
-	z-index: 2; /* Specify a stack order in case you're using a different order for other */
+	background-color: rgba(255,255,255,0.70); 
+	backdrop-filter: blur(5px);
 	place-items: center;
 }
 
 #galleryContainer {
-	margin: auto;
-	max-height: 80vh;
+	max-height: 90vh;
+	max-width: 60%;
 }
 
 #imageShowcase {
@@ -230,7 +258,6 @@ a.closeOverlay {
 	padding: 10px;
 	background-color: #363532;
 	border-radius: 5px;
-
 }
 
 
