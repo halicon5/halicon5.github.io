@@ -58,7 +58,10 @@ Lefthand menu and left-hand gradient styling
 */
 
 div#leftGradient {
-	background: linear-gradient(90deg, rgba(255,255,255,.75) 0%, rgba(255,255,255,.0) 100%);
+	background: linear-gradient(90deg, rgba(220,220,220,.75) 0%, rgba(255,255,255,.0) 100%);
+	/*
+	background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,.75) 30%, rgba(255,255,255,.0) 100%);
+	*/
 	width: 260px;
 	padding-bottom: 10px;
 	position: fixed;
@@ -242,13 +245,13 @@ a.closeOverlay {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: rgba(255,255,255,0.70); 
+	background-color: rgba(202,196,192,0.80); 
 	backdrop-filter: blur(5px);
 	place-items: center;
 }
 
 #galleryContainer {
-	max-height: 90vh;
+	max-height: 80vh;
 	max-width: 60%;
 }
 
