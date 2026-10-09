@@ -20,11 +20,12 @@ h1, h2, h3 {
 div#pageHeadHome {
 	color:  #CAC7C0; /* whitesmoke; */
 	padding-left: 80px;
+	text-shadow: -1px -1px #3A3730, -1px 1px #3A3730, 1px -1px #3A3730, 1px 1px #3A3730, 1px 0px #3A3730, -1px 0px #3A3730;
 }
 
 div#pageHead {
 	color: #CAC7C0; /* whitesmoke; */
-	background-image: url("images/background7.jpg");
+	background-image: url("images/background1.jpg");
 	background-size: cover;
 	background-position: center center;
 	padding-left: 80px;
@@ -96,8 +97,9 @@ ul.leftMenu li {
 
 a.menuItem {
 	font-size: 150%;
-	color: #363532;
+	color: #262522;
 	text-decoration: none;
+
 }
 
 a.menuItem:hover {
